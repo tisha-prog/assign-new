@@ -13,16 +13,27 @@ This repository contains the implementation of a Retrieval-Augmented Generation 
 - [Technical Skills](#technical-skills)
 
 ## Introduction
-This project has developed a RAG framework that leverages/utilizes current LLMs to generate answers to questions based on the ten blog articles. The articles have been pre-processed for efficient retrieval (data pre-processing stage). 
+![QNA LLM](https://github.com/tisha-prog/assign-new/assets/60807484/15448cdb-82cb-4cc6-bca5-48f32266873e)
+
+This project has developed a RAG framework that leverages/utilizes the LLMs (OPENAI Langchain models) to generate answers to questions based on the ten blog articles. The articles have been pre-processed (data pre-processing stage) for efficient retrieval. 
 The framework integrates retrieval and generation processes to provide accurate and relevant answers.
+
+![rag_indexing-8160f90a90a33253d0154659cf7d453f](https://github.com/tisha-prog/assign-new/assets/60807484/3bc30c51-7383-4a03-aba3-36824c901883)
+
+STEPS : 
+   1. load and preprocess the raw data (articles which is document.pdf)
+   2. create chunks and embeddings (OPENAIEMBEDDINGS)
+   3. store in VectorDB FAISS (langchain.vectordb)
+   4. then perform similarity-search query 
+   5. run the query-answering process 
 
 ## Installation
 To run this project, you need to have Python 3.12 or higher installed. Follow the steps below to set up the environment and install the required dependencies.
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/rag-framework.git
-    cd rag-framework
+    https://github.com/tisha-prog/assign-new.git
+    cd assign-new
     ```
 
 2. **Create and activate a virtual environment:**
@@ -48,7 +59,13 @@ To run this project, you need to have Python 3.12 or higher installed. Follow th
     ```bash
     jupyter notebook
     ```
-   Open `rag_framework.ipynb` and follow the steps to load and preprocess the articles, create embeddings, and run the query-answering process.
+   Open `main.ipynb` and run all cells to -
+
+   1. load and preprocess the raw data (articles which is document.pdf)
+   2. create chunks and embeddings (OPENAIEMBEDDINGS)
+   3. store in vectordb FAISS (langchain.vectordb)
+   4. then perform similarity-search query 
+   5. run the query-answering process 
 
 3. **Example Query:**
    Run the following code in a notebook cell to ask a question:
